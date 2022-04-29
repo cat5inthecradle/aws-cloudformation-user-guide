@@ -561,7 +561,7 @@ The following example creates a Redshift cluster and a secret with credentials\.
       "MyRedshiftSecret":{
          "Type":"AWS::SecretsManager::Secret",
          "Properties":{
-            "Description":"This is my rds instance secret",
+            "Description":"This is my redshift cluster secret",
             "GenerateSecretString":{
                "SecretStringTemplate":"{\"username\": \"admin\"}",
                "GenerateStringKey":"password",
@@ -721,7 +721,7 @@ Resources:
   MyRedshiftSecret:
     Type: AWS::SecretsManager::Secret
     Properties:
-      Description: This is my rds instance secret
+      Description: This is my redshift cluster secret
       GenerateSecretString:
         SecretStringTemplate: '{"username": "admin"}'
         GenerateStringKey: password
